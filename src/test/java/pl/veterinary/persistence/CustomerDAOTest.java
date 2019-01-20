@@ -37,16 +37,13 @@ public class CustomerDAOTest {
 		// then
 		Assert.assertEquals(user.getName(), userFromDatabase.getName());
 		Assert.assertEquals(user.getSurname(), userFromDatabase.getSurname());
-		
+
 	}
 
 	@Test
 	@Transactional
 	@Rollback(true)
 	public void shouldSaveCustomerWithAnimals() {
-		// given
-		String login = "kubus123";
-
 		Customer user = new Customer();
 		user.setName("Kubus");
 		user.setSurname("Puchatek");
